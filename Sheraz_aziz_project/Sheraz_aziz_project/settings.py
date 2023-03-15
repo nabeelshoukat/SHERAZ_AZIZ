@@ -1,6 +1,7 @@
 from pathlib import Path
 import django_heroku
 import dj_database_url
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -13,7 +14,7 @@ SECRET_KEY = 'django-insecure-i*_u4@y#1_$^@b182%buxfp)=r-)cda*ih&$$x^sei49giwvp+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://sheraz-aziz-project-management.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['https://sheraz-aziz-project-management.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
@@ -30,6 +31,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
